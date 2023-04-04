@@ -3,6 +3,13 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            url = uri("https://maven.pkg.github.com/YAtechnologies/yassir-chat-android")
+            credentials {
+                username = providers.gradleProperty("GITHUB_USER").get()
+                password = providers.gradleProperty("GITHUB_TOKEN").get()
+            }
+        }
     }
 }
 dependencyResolutionManagement {
@@ -10,6 +17,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://maven.pkg.github.com/YAtechnologies/yassir-chat-android")
+            credentials {
+                username = providers.gradleProperty("GITHUB_USER").get()
+                password = providers.gradleProperty("GITHUB_TOKEN").get()
+            }
+        }
     }
 }
 rootProject.name = "yassir-chat-test-integration"
