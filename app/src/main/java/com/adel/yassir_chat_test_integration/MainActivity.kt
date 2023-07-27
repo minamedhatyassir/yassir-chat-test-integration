@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onSuccess() {
-                   // word around till fix the interface to be thread safe
+                    // word around till fix the interface to be thread safe
                     lifecycleScope.launch {
                         binding.startBtn.isEnabled = true
                         binding.stateTv.text = "connected"
@@ -49,10 +49,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun startChat() {
         val chatRoomData = ChatRoomData(
-            "driverID",
-            AssociatedUsedType.DRIVER,
-            "driverName",
-            "adel233"
+            associatedUserID = "driverID",
+            associatedUserType = AssociatedUsedType.DRIVER,
+            associatedUserPhone = "+12345678",
+            associatedUserName = "driverName",
+            roomId = "int1"
         )
         YassirChat.getInstance().startChatActivity(this@MainActivity, chatRoomData)
     }

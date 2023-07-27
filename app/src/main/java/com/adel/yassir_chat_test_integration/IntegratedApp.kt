@@ -12,7 +12,7 @@ class IntegratedApp : Application() {
 
         YassirChat.Builder()
             .appContext(this)
-            .connConfig( ChatConnectionConfig.defaultConnectionConfig(this))
+            .connConfig(ChatConnectionConfig.defaultConnectionConfig(this))
             .deviceId(YassirUtils.getSHA1DeviceId(this))
             .build()
 
